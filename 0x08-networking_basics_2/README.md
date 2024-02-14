@@ -30,3 +30,21 @@ Obviously, the IPs displayed may be different depending on which machine you are
 
 Note that we can see our localhost IP
 
+## Advanced
+
+2. Write a Bash script that listens on port 98 on localhost.
+
+Terminal 0
+
+Starting my script.
+
+Terminal 1
+
+Connecting to localhost on port 98 using telnet and typing some text.
+
+Terminal 0
+
+Receiving the text on the other side.
+
+For the sake of the exercise, this connection is made entirely within localhost. This isn’t really exciting as is, but we can use this script across networks as well. Try running it between your local PC and your remote server for fun!
+
