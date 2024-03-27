@@ -30,3 +30,12 @@ Your SSH client configuration must be configured to refuse to authenticate using
 3. Now that you have successfully connected to your server, we would also like to join the party.
 
 Add the SSH public key below to your server so that we can connect using the ubuntu user.
+
+## Advanced
+
+100. Let’s practice using Puppet to make changes to our configuration file. Just as in the previous configuration file task, we’d like you to set up your client SSH configuration file so that you can connect to a server without typing a password.
+
+Requirements:
+
+Your SSH client configuration must be configured to use the private key ~/.ssh/school
+Your SSH client configuration must be configured to refuse to authenticate using a password
