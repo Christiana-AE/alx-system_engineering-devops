@@ -34,6 +34,4 @@ if __name__ == '__main__':
                 user_data = {
                     "{}".format(id): user_data
                 }
-                json.dump(user_data, json_file)
-
-  
+                json.dump(user_data, json_file) 
