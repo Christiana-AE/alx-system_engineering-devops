@@ -4,13 +4,10 @@
 sudo apt-get update
 sudo apt-get install nginx -y
 sudo service nginx start
-sudo ufw allow 22
-sudo ufw allow 80
-sudo ufw --force enable
-sudo ufw status
+sudo sed -i '/listen 80 default_server;/a listen 80;' /etc/nginx/sites-available/default
+sudo sed -i '/listen \[::\]:80 default_server;/a listen [::]:80;' /etc/nginx/sites-available/default
 systemctl status nginx
 echo 'Hello World!' | sudo tee /var/www/html/index.nginx-debian.html > /dev/null
 sudo service nginx restart
-sudo ufw allow 'Nginx HTTP'
 curl http://54.89.193.243/
 
