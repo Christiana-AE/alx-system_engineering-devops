@@ -1,24 +1,19 @@
 #!/usr/bin/env bash
+
+#program to perform a 301 move permanently
+#redirect link containing replaceable string to google.com link instead
+
 # script to install and setup nginx
-CONFIG_FILE="/etc/nginx/sites-available/default"
-# install nginx
-apt-get -y update
-apt-get -y install nginx
+sudo apt-get update
+sudo apt-get install -y nginx
 
 # update index.html file
-echo 'Hello World!' > /usr/share/nginx/html/index.html
+echo 'Hello World!' | sudo tee /var/www/html/index.html
 
-# update config file to redirect
-printf %s "server {
-    listen 80;
-    listen [::]:80 default_server;
-    root   /usr/share/nginx/html;
-    index  index.html index.htm;
+string_for_replacement="server_name -;\n\trewrite ^\/redirect_me https:google\/\/google.com 301;"
 
-    location /redirect_me {
-        return 301 http://google.com/;
-    }
-}" > $CONFIG_FILE
+# insert into the string
+sudo sed -i "s/server_name _;/$string_for_replacement/" /etc/nginx/sites-enabled/default
 
-# start nginx after reloading config
-service nginx start
+#restart nginx
+sudo service nginx restart
