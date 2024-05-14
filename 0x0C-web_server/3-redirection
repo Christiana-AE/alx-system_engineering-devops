@@ -10,7 +10,7 @@ sudo apt-get install -y nginx
 # update index.html file
 echo 'Hello World!' | sudo tee /var/www/html/index.html
 
-string_for_replacement="server_name -;\n\trewrite ^\/redirect_me https:google\/\/google.com 301;"
+string_for_replacement="server_name -;\n\trewrite ^\/redirect_me https:\/\/google.com 301;"
 
 # insert into the string
 sudo sed -i "s/server_name _;/$string_for_replacement/" /etc/nginx/sites-enabled/default
