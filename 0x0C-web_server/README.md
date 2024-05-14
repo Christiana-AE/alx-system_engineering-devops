@@ -55,6 +55,8 @@ The redirection must be a “301 Moved Permanently”
 You answer file should be a Bash script containing commands to automatically configure a Ubuntu machine to respect above requirements
 Using what you did with 1-install_nginx_web_server, write 3-redirection so that it configures a brand new Ubuntu machine to the requirements asked in this task
 
+I found this helpful: 'https://www.youtube.com/watch?v=NvDVsxWQUAc'
+
 4. Configure your Nginx server to have a custom 404 page that contains the string Ceci n'est pas une page.
 
 Requirements:
