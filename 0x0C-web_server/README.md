@@ -45,6 +45,7 @@ configure your DNS records with an A entry so that your root domain points to yo
 go to your profile and enter your domain in the Project website url field
 
 When your domain name is setup, please verify the Registrar here: https://whois.whoisxmlapi.com/ and you must see in the JSON response: "registrarName": "Dotserve Inc"
+Link I found helpful: 'https://www.youtube.com/watch?v=dx3b-GkMzns'
 
 3. Read this 'https://stackoverflow.com/questions/26041088/sed-replace-line-with-multiline-variable'
 Configure your Nginx server so that /redirect_me is redirecting to another page.
