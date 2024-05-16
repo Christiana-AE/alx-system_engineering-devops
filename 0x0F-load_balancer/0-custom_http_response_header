@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+# Configure web-01 to have HTTP response header
+
+#First update the package list
+sudo apt-get update
+sudo apt-get install -y nginx
+
+#Customize web server 2 to be like 1
+echo "Hello World!" | sudo tee /var/www/html/index.html
+
+#Perform a redirection to another page
+new_string="server_name _; \n\trewrite ^\/redirect_me http:\/\/www.holbertonschool.com redirect permanent;"
+
+sudo sed -i "s/server_name _;/$new_string/" /etc/nginx/sites-available/default
+
+# Create a custom error page for 404 status code
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
+
+# Put the custom HTTP response header
+sudo sed -i "server_name _;/a add_header X-Served-By $HOSTNAME;" /etc/nginx/sites-available/default
+
+#Test for syntax errors
+sudo nginx -t
+
+#Restart the server
+sudo service nginx restart
