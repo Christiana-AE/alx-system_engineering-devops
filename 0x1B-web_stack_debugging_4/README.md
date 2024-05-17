@@ -1,4 +1,4 @@
-# Web Stack Debugging
+I# Web Stack Debugging
 Project to work on debugging 
 
 ##Task
@@ -125,3 +125,4 @@ Percentage of the requests served within a certain time (ms)
  100%     31 (longest request)
 root@0a62aa706eb3:/#
 
+1. Change the OS configuration so that it is possible to login with the holberton user and open a file without any error message.
