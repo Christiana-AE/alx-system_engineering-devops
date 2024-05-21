@@ -1,6 +1,7 @@
 # MySQL
 
 Project on mysql
+
 Link I found helpful: https://www.youtube.com/watch?v=hsHcPMojFSw
 
 ## Tasks
