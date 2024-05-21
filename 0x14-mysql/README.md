@@ -1,6 +1,7 @@
 # MySQL
 
 Project on mysql
+Link I found helpful: https://www.youtube.com/watch?v=hsHcPMojFSw
 
 ## Tasks
 0. First things first, let’s get MySQL installed on both your web-01 and web-02 servers.
